@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+security-reports/
+.security-scan/
+report.json
+report.md
+*.env
+.env*
+.DS_Store

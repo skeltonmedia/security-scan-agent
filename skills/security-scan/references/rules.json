@@ -1,0 +1,27 @@
+{
+  "firewall-disabled": {
+    "priority": "P2",
+    "title": "The application firewall reports disabled",
+    "action": "Review required sharing and application exceptions, then enable the firewall. Verify required workflows still work. A wildcard listener is not proof of internet reachability."
+  },
+  "potential-secret": {
+    "priority": "P1",
+    "title": "A file contains a possible credential",
+    "action": "Inspect locally without copying the value into chat. If real, move it to a private credential store. If previously exposed, revoke and rotate it; deleting a file or commit does not revoke a key."
+  },
+  "package-advisory": {
+    "priority": "P2",
+    "title": "A resolved package version matches an advisory",
+    "action": "Read the maintainer advisory, establish whether the affected feature is deployed or reachable, prepare a compatible update, test, and verify the deployed version. Do not use a blind forced upgrade."
+  },
+  "newer-release": {
+    "priority": "P2",
+    "title": "A newer release is available",
+    "action": "Review vendor release notes and update using the vendor or trusted package manager. Restart consumers and verify the running version. A newer release alone does not prove a particular CVE applies."
+  },
+  "eol-runtime": {
+    "priority": "P1",
+    "title": "A runtime branch is past upstream support",
+    "action": "Identify consumers of this exact executable, select a supported release, test compatibility and restart consumers. Do not delete a second installation until its consumers are established."
+  }
+}

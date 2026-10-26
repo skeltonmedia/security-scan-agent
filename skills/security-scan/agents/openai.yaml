@@ -1,0 +1,4 @@
+interface:
+  display_name: "Security Scan"
+  short_description: "Audit local evidence against current security advisories"
+  default_prompt: "Use $security-scan to audit my selected projects and prepare an evidence-backed fix plan."
