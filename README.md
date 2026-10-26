@@ -137,15 +137,14 @@ python3 skills/security-scan/testing/check.py
 
 Tests use temporary synthetic projects and fake feed responses. They exercise
 network consent, redaction, alias matching, pagination, failure paths, budgets,
-symlink boundaries, scope comparisons and output permissions. The first
-release was tested on macOS; Linux and Windows validation remains open.
+symlink boundaries, scope comparisons and output permissions.
 
-An optional [Actions template](ci/test.yml) defines a Linux, macOS and Windows
-matrix with Python 3.11 and 3.13, pinned action commits and read-only repository
-permissions. It is a template, not an active or verified CI run. To enable it,
-use a GitHub login with workflow permission and copy it to
-`.github/workflows/test.yml`. Copy [the Dependabot template](ci/dependabot.yml)
-to `.github/dependabot.yml` to propose action updates. Review those updates.
+[GitHub Actions](.github/workflows/test.yml) runs both commands on every push
+and pull request across Linux, macOS and Windows with Python 3.11 and 3.13.
+The workflow pins action commits, grants read-only repository permissions and
+does not persist checkout credentials. CI tests the code on those platforms;
+detailed host checks still run only on macOS. [Dependabot](.github/dependabot.yml)
+proposes weekly action updates for review.
 
 Read [SECURITY.md](SECURITY.md) before reporting a vulnerability. Do not post
 private scan reports or credentials in an issue. MIT licensed; contributions

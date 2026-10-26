@@ -15,5 +15,6 @@
   source provenance, network consent, pagination, budgets and report handling.
 - Detailed Linux and Windows host checks, additional package ecosystems and
   deployed reachability remain outside this release's coverage.
-- Cross-platform CI is supplied as an optional setup template; this release
-  has local macOS validation and no verified Linux/Windows run.
+- GitHub Actions runs the tests on Linux, macOS and Windows with Python 3.11
+  and 3.13, with pinned actions and read-only permissions. Dependabot proposes
+  action updates.
